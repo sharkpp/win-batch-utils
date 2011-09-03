@@ -21,6 +21,8 @@ for /D %%I in (*) do (
  echo updating: %%I
  git svn rebase --authors-file="%GIT_BASE%authors" --username=%REPOS_USER%
  if errorlevel 1 goto :put_error
+ git svn push
+ if errorlevel 1 goto :put_error
  popd
 )
 
