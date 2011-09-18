@@ -57,6 +57,14 @@ authorsファイルが無いと怒られます。
       ex.
         svn2github.cmd http://svn.example.net/test example-test -s
 
+#### authorsファイル
+
+authorsファイルは1行が次のような形式になっているファイルを置いてください。
+svn-user が、Subversionで使用しているユーザー名。
+git-user が、githubで使用しているユーザー名。
+
+    svn-user = git-user<hoge@example.net>
+
 ### git/sync4git.cmd
 
 svnとgitを同期させるバッチスクリプトです。
