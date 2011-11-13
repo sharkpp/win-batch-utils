@@ -15,6 +15,16 @@ Windows用のバッチファイル群
 
     usage: folder_arc.bat
 
+### arc2zip.cmd
+
+カレントディレクトリ直下の圧縮ファイルを全てzip形式に変換するためのバッチファイルです。
+動作には、 [7z](http://sevenzip.sourceforge.jp/) が必須となっています。
+arc2zip.exclude.txt がバッチファイルと同じ場所にある場合は、書かれているファイルを除外して圧縮します。
+
+#### 使い方
+
+    usage: arc2zip.cmd
+
 ### pdf2jpg.cmd
 
 PDFからJpegファイル or zipへの変換を簡単に行うためのバッチファイルです。
