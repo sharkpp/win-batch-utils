@@ -6,14 +6,15 @@ Windows用のバッチファイル群
 
 大体は引数なしなどで起動するとヘルプが出てきます。
 
-### folder_arc.bat
+### folder2zip.cmd
 
-カレントディレクトリ直下のディレクトリを全て圧縮するためのバッチファイルです。
+カレントディレクトリ直下のディレクトリを全てzip形式で圧縮するためのバッチファイルです。
 動作には、 [7z](http://sevenzip.sourceforge.jp/) が必須となっています。
+folder2zip.exclude.txt がバッチファイルと同じ場所にある場合は、書かれているファイルを除外して圧縮します。
 
 #### 使い方
 
-    usage: folder_arc.bat
+    usage: folder2zip.cmd
 
 ### arc2zip.cmd
 
