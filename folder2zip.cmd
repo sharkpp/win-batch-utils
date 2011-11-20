@@ -31,7 +31,6 @@ if exist "%EXCLUDE_LIST%" set _=%_% -x@"%EXCLUDE_LIST%"
 rem à≥èk
 for /d %%I in (*) do (
 	echo "%%I"
-	echo 7z a -tzip -mx9 %_% "%DEST_DIR%\%%I.zip" "%%I"
 	7z a -tzip -mx9 %_% "%DEST_DIR%\%%I.zip" "%%I"
 )
 
