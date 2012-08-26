@@ -11,20 +11,22 @@ Windows用のバッチファイル群
 カレントディレクトリ直下のディレクトリを全てzip形式で圧縮するためのバッチファイルです。
 動作には、 [7z](http://sevenzip.sourceforge.jp/) が必須となっています。
 folder2zip.exclude.txt がバッチファイルと同じ場所にある場合は、書かれているファイルを除外して圧縮します。
+引数に対象フォルダを指定した場合は、順番に処理していきます。
 
 #### 使い方
 
-    usage: folder2zip.cmd
+    usage: folder2zip.cmd [TARGET_FOLDER ...]
 
 ### arc2zip.cmd
 
 カレントディレクトリ直下の圧縮ファイルを全てzip形式に変換するためのバッチファイルです。
 動作には、 [7z](http://sevenzip.sourceforge.jp/) が必須となっています。
 arc2zip.exclude.txt がバッチファイルと同じ場所にある場合は、書かれているファイルを除外して圧縮します。
+引数に対象フォルダを指定した場合は、順番に処理していきます。
 
 #### 使い方
 
-    usage: arc2zip.cmd
+    usage: arc2zip.cmd [TARGET_FOLDER ...]
 
 ### pdf2jpg.cmd
 

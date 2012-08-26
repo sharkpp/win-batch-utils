@@ -3,10 +3,13 @@ setlocal
 
 rem ******************************************************************
 rem 圧縮ファイル形式変換バッチファイル
-rem   usage: arc2zip.cmd
+rem   usage: arc2zip.cmd [TARGET_FOLDER ...]
 rem ※arc2zip.exclude.txt があれば、書かれているファイルを
 rem 圧縮処理から除外します
 rem ******************************************************************
+
+rem 引数が指定されている場合は引数を順に処理する
+if not "" == "%~1" goto :parse_args
 
 rem 7zの実行ファイルフォルダをパスに追加
 set SZ_PATH=
@@ -51,3 +54,16 @@ goto :eof
 	rem 圧縮
 	7z a -tzip -mx9 -r %_% "%WORK_DIR%\*"
 	exit /b
+
+rem 引数処理
+:parse_args
+	set _0="%~dpnx0"
+:parse_args_core
+	pushd "%~1"
+	call %_0%
+	popd
+	shift
+	if not "" == "%~1" goto :parse_args_core
+	endlocal
+	goto :eof
+
